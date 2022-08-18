@@ -1,0 +1,41 @@
+.root {
+  position: relative;
+
+  user-select: none;
+}
+
+.root.max-content {
+  width: max-content;
+}
+
+.head {
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.body {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.arrow {
+  --rotation: 0deg;
+
+  transform: rotate(var(--rotation));
+
+  transition: transform var(--transition);
+}
+
+.arrow.down {
+  --rotation: 90deg;
+}
+
+.arrow.up {
+  --rotation: -90deg;
+}

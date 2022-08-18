@@ -1,0 +1,10 @@
+.root {
+  border: 1px solid var(--primary-color);
+  border-top: none;
+  padding: 10px;
+}
+
+.root:hover {
+  background: var(--secondary-color);
+  color: var(--background-color);
+}
