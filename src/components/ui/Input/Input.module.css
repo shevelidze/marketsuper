@@ -1,0 +1,25 @@
+.root:focus {
+  outline: none;
+}
+
+.root {
+  --border-color: var(--text-lighter-color);
+  --color: var(--text-lighter-color);
+
+  border: none;
+  border-bottom: 2px solid var(--border-color);
+
+  padding: 15px;
+
+  transition: border-bottom var(--transition);
+}
+
+.root::placeholder {
+  color: var(--color);
+  font-size: var(--medium-font-size);
+}
+
+.root:focus {
+  --border-color: var(--secondary-lighter-color);
+  --color: var(--secondary-lighter-color);
+}
