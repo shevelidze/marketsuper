@@ -1,33 +1,43 @@
 .root {
-  --color: var(--primary-color);
-
-  border: 2px solid var(--color);
-
-  background: var(--color);
-  color: var(--background-color);
-  box-shadow: 0px 2px 10px var(--color);
-
-  font-weight: var(--semi-bold-font-weigh);
-
+  border: none;
   padding: 10px 20px;
-
   transition: background var(--transition), box-shadow var(--transition), color var(--transition), border-color var(--transition);
 }
 
-.big {
+.root.big {
   font-size: var(--big-font-size);
 }
 
-.root:hover:not(:disabled) {
-  --color: var(--secondary-color);
+.root.primary {
+  --primary-variant-color: var(--primary-color);
+
+  font-weight: var(--semi-bold-font-weigh);
+
+  color: var(--background-color);
+  border: 2px solid var(--primary-variant-color);
+
+  background: var(--primary-variant-color);
+}
+
+.root.primary:not(:disabled) {
+  box-shadow: 0px 2px 10px var(--primary-variant-color);
+}
+
+.root.primary:hover:not(:disabled) {
+  --primary-variant-color: var(--secondary-color);
   transition: none;
 }
 
-.root:disabled {
-  box-shadow: none;
+.root.primary:disabled {
+  background: none;
+  color: var(--primary-variant-color)
 }
 
-.root:active, .root:disabled {
+.root.secondary {
   background: none;
-  color: var(--color)
+  color: var(--secondary-color);
+}
+
+.root.secondary:hover {
+  background: var(--secondary-lightest-color);
 }

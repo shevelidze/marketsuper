@@ -7,7 +7,10 @@ const UiTest: React.FC = () => {
     <div className={styles.root}>
       <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
         <ui.Button>Hello world!</ui.Button>
-        <ui.Button variant="small">Hello world!</ui.Button>
+        <ui.Button size="small">Hello world!</ui.Button>
+        <ui.Button variant="secondary" size="small">
+          Hello world!
+        </ui.Button>
         <ui.Button disabled>Hello world!</ui.Button>
       </div>
       <ui.Input placeholder="Placeholder" />
