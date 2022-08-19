@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { ReactComponent as Arrow } from '../../../icons/arrow.svg';
 import SelectContext, { SelectValueSetter } from './SelectContext';
 import styles from './Select.module.css';
@@ -22,6 +22,26 @@ const Select: React.FC<SelectProps> = ({
   const [selectedChildren, setSelectedChildren] =
     useState<React.ReactNode>(null);
 
+  const rootRef = useRef<HTMLDivElement | null>(null);
+
+  const clickCallback = useCallback(
+    (event: MouseEvent) => {
+      if (rootRef.current === null) return;
+      if (
+        event.target !== rootRef.current &&
+        !rootRef.current.contains(event.target as any)
+      )
+        setBodyIsShown(false);
+    },
+    [setBodyIsShown, rootRef.current]
+  );
+  useEffect(() => {
+    document.addEventListener('click', clickCallback);
+    return () => {
+      document.removeEventListener('click', clickCallback);
+    };
+  }, [clickCallback]);
+
   const setValueWithCallback: SelectValueSetter = (value, headChildren) => {
     onValueChange?.(value);
     setBodyIsShown(false);
@@ -35,7 +55,7 @@ const Select: React.FC<SelectProps> = ({
 
   return (
     <SelectContext.Provider value={setValueWithCallback}>
-      <div className={rootClassList.join(' ')} {...rootProps}>
+      <div className={rootClassList.join(' ')} {...rootProps} ref={rootRef}>
         <div
           className={styles.head}
           onClick={setBodyIsShown.bind(null, !bodyIsShown)}
