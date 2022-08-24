@@ -9,7 +9,7 @@ const UiTest: React.FC = () => {
         <ui.Button>Hello world!</ui.Button>
         <ui.Button size="small">Hello world!</ui.Button>
         <ui.Button variant="secondary" size="small">
-          Hello world!
+          Hello23456
         </ui.Button>
         <ui.Button disabled>Hello world!</ui.Button>
       </div>

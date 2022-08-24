@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { ReactComponent as Arrow } from '../../../icons/arrow.svg';
+import Arrow from '../../../icons/arrow.svg';
 import SelectContext, { SelectValueSetter } from './SelectContext';
 import styles from './Select.module.css';
 
