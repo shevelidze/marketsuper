@@ -11,6 +11,10 @@
   gap: var(--spacing-4);
 
   background: var(--background-color);
+
+  transition: box-shadow var(--transition);
+
+  z-index: 100;
 }
 
 .indicatorsWrapper {
@@ -21,4 +25,8 @@
 
 .root>input {
   width: 30%;
+}
+
+.floating {
+  box-shadow: 0 0 15px -6px var(--text-color);
 }
