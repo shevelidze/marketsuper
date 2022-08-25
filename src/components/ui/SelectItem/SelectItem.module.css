@@ -2,6 +2,8 @@
   border: 1px solid var(--primary-color);
   border-top: none;
   padding: 10px;
+
+  background: var(--background-color);
 }
 
 .root:hover {
