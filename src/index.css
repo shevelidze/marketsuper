@@ -29,6 +29,9 @@
   --transition: 0.2s ease-in-out;
 
 
+  --shadow: 0 0 15px -6px var(--text-color);
+
+
   --spacing-1: 3px;
   --spacing-2: 10px;
   --spacing-3: 15px;

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Arrow from '../../../icons/arrow.svg';
 import SelectContext, { SelectValueSetter } from './SelectContext';
 import styles from './Select.module.css';
+import joinClasses from '../../../utils/joinClasses';
 
 export interface SelectProps
   extends React.PropsWithChildren,
@@ -55,7 +56,14 @@ const Select: React.FC<SelectProps> = ({
 
   return (
     <SelectContext.Provider value={setValueWithCallback}>
-      <div className={rootClassList.join(' ')} {...rootProps} ref={rootRef}>
+      <div
+        className={joinClasses({
+          [styles.root]: true,
+          [className || 'userClass']: !!className,
+        })}
+        {...rootProps}
+        ref={rootRef}
+      >
         <div
           className={styles.head}
           onClick={setBodyIsShown.bind(null, !bodyIsShown)}

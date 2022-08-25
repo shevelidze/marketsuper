@@ -28,5 +28,5 @@
 }
 
 .floating {
-  box-shadow: 0 0 15px -6px var(--text-color);
+  box-shadow: var(--shadow);
 }
