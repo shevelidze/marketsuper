@@ -1,0 +1,10 @@
+.root {
+  padding: var(--spacing-4);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.section>*:not(:last-child) {
+  margin-bottom: var(--spacing-3);
+}
