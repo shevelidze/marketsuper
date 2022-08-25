@@ -28,6 +28,6 @@
   },
   "nodemonConfig": {
     "ext": "ts,tsx,js,jsx,html,css",
-    "exec": "npm run build && npm run start"
+    "exec": "npm run build && npm run start-dev"
   }
 }
