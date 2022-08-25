@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  height: 60px;
+
+  padding: 0 var(--spacing-4);
+  gap: var(--spacing-4);
+
+  background: var(--background-color);
+}
+
+.indicatorsWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.root>input {
+  width: 30%;
+}
