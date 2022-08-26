@@ -1,0 +1,18 @@
+.root {
+  all: unset;
+
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + var(--spacing-2));
+  right: 0;
+  width: max-content;
+
+  padding: var(--spacing-3) var(--spacing-4);
+
+  box-shadow: var(--shadow);
+
+  background: var(--background-color);
+}

@@ -1,0 +1,17 @@
+.root {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  border: 2px solid var(--text-color);
+
+  font-weight: var(--semi-bold-font-weight);
+  font-size: var(--big-font-size);
+}

@@ -23,13 +23,13 @@
 
 
   --regular-font-weight: 400;
-  --semi-bold-font-weigh: 600;
+  --semi-bold-font-weight: 600;
 
 
   --transition: 0.2s ease-in-out;
 
 
-  --shadow: 0 0 15px -6px var(--text-color);
+  --shadow: 0 3px 10px var(--text-lighter-color);
 
 
   --spacing-1: 3px;
