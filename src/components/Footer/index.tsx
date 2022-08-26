@@ -5,7 +5,7 @@ import styles from './Footer.module.css';
 const Footer: React.FC = () => {
   return (
     <div className={styles.root}>
-      <div className={styles.section}>
+      <div>
         <Logo />
         <div>Copyright © 2022 Marketsuper Inc.</div>
       </div>
